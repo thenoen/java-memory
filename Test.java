@@ -53,7 +53,7 @@ class Test {
                 values.removeLast();
             }
 
-            // System.gc(); // <== in this code is very high chance that GC will actually run and has a big effect on memory usage
+            System.gc(); // <== in this code is very high chance that GC will actually run and has a big effect on memory usage
             usagePercent = getUsedHeapPercentage();
 
             System.out.println("new object count: " + newObjectCount + " (" + allocationRate + ")");
