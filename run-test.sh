@@ -4,6 +4,7 @@
 
 function test {
     echo "running test ${1}"
+    echo $HOST_HOSTNAME
 
     javac Test.java && java \
         -Xms512m \
@@ -11,10 +12,11 @@ function test {
         -XX:+UnlockDiagnosticVMOptions \
         -XX:ZTenuringThreshold=10 \
         -Dcom.sun.management.jmxremote=true \
-        -Dcom.sun.management.jmxremote.ssl=false \
+        -Dcom.sun.management.jmxremote.local.only=false \
         -Dcom.sun.management.jmxremote.authenticate=false \
+        -Dcom.sun.management.jmxremote.ssl=false \
         -Dcom.sun.management.jmxremote.port=9011 \
-        -Dcom.sun.management.jmxremote.rmi.port=9012 \
+        -Dcom.sun.management.jmxremote.rmi.port=9011 \
         -Djava.rmi.server.hostname=$HOST_HOSTNAME \
         Test 
 

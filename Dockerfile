@@ -4,6 +4,8 @@ COPY ./Test.java    .
 COPY ./run-test.sh  .
 
 # for VisualVM
-EXPOSE 9010
+# EXPOSE 9010
+EXPOSE 9011
+# EXPOSE 9012
 
-ENTRYPOINT ["./run-test.sh", "$HOST_HOSTNAME"]
+ENTRYPOINT ["./run-test.sh"]

@@ -4,6 +4,8 @@
     - without explicit GC
     ...maybe try adding more CPU load from application (search prime numbers in a Thread)
 
+examples of config. from CETRA  tickets
+
 test Docker memory limits: docker memory has impact on Xmx
 
 investigate metrics visible in Grafana
@@ -41,3 +43,23 @@ The Docker 19.03.13-ce or earlier daemon reserves a minimum of 4 MiB of memory f
 Type: Integer
 
 Required: No
+
+===================================================================
+
+[Java Application Detail]
+
+* Total Memory Usage - docker_memory_usage: https://github.dev/ohpen/monitoring-tfm-grafana/blob/85063af013cd7b8981be601e9b08e2c0066524a7/terraform_grafana/dashboards/java/java-container-detail.json
+* Heap Memory Uage
+* Non-Heap Memory Usage
+* Eden Space
+* Tenured / Old Gen
+* Survivor Space
+* Metaspace
+* Compressed Class Space
+* Code Cache
+* Used Memory Areas
+* Used Heap Memory Areas
+* Used Non-Heap Memory Areas
+
+* GC Duration
+* GC Count
