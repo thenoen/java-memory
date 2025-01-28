@@ -4,7 +4,7 @@ function test {
     echo "running test ${1}"
     echo $HOST_HOSTNAME
 
-    memory=450
+    memory=400
 
     set -x
     javac Test.java && java \
