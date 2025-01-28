@@ -5,7 +5,8 @@
 function test {
     echo "running test ${1}"
 
-    javac Test.java  && java \
+    javac Test.java && java \
+        -Xms512m \
         -Xmx512m \
         -XX:+UnlockDiagnosticVMOptions \
         -XX:ZTenuringThreshold=10 \

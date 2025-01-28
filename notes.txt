@@ -4,8 +4,9 @@
     - without explicit GC
     ...maybe try adding more CPU load from application (search prime numbers in a Thread)
 
-test Docker memory limits
+test Docker memory limits: docker memory has impact on Xmx
 
+investigate metrics visible in Grafana
 
 (AWS console): ContainerDefinition.memory
 
