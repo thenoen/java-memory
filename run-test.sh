@@ -6,9 +6,11 @@ function test {
     echo "running test ${1}"
     echo $HOST_HOSTNAME
 
+    memory=512
+
     javac Test.java && java \
-        -Xms512m \
-        -Xmx512m \
+        -Xms${memory}m \
+        -Xmx${memory}m \
         -XX:+UnlockDiagnosticVMOptions \
         -XX:ZTenuringThreshold=10 \
         -Dcom.sun.management.jmxremote=true \

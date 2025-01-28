@@ -6,5 +6,6 @@ docker run \
     -it \
     --rm \
     -e HOST_HOSTNAME=$HOSTNAME \
-    --memory 2048m \
+    --memory 512m \
+    --memory-swap 512m \
     java-memory
