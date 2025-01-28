@@ -1,13 +1,12 @@
 #!/bin/bash
 
-
-
 function test {
     echo "running test ${1}"
     echo $HOST_HOSTNAME
 
-    memory=512
+    memory=450
 
+    set -x
     javac Test.java && java \
         -Xms${memory}m \
         -Xmx${memory}m \
@@ -22,8 +21,6 @@ function test {
         -Djava.rmi.server.hostname=$HOST_HOSTNAME \
         Test 
 
-#                -Dcom.sun.management.jmxremote.local.only=false \
 }
-
 
 test

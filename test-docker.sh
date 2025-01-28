@@ -8,4 +8,5 @@ docker run \
     -e HOST_HOSTNAME=$HOSTNAME \
     --memory 512m \
     --memory-swap 512m \
+    --name java-memory \
     java-memory
